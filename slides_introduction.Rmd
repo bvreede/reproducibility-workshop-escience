@@ -1,0 +1,153 @@
+---
+title: "Welcome!"
+author: "Best Practices for Writing Reproducible Code"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts, 'custom.css']
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Thanks!
+
+- To you for being here!
+
+- To the [Open Science Community Utrecht (OSCU)](https://openscience-utrecht.com) and [Research Data Management Support (RDM Support)](https://www.uu.nl/en/research/research-data-management) for supporting the development of this workshop
+
+- To Armel Lefebvre, Bianca Kramer, Cedric Thieulot, Erik van Sebille, Jeroen Bosman, Jeroen Ooms, Jonathan de Bruin, Lukas van de Wiel, Mateusz Kuzak, Menno Fraters, Philippe Delandmeter, and Renato Alves, for helping develop this workshop
+
+- To your teachers today: Bianca Kramer, Lena Karvovskaya, and Jacques Flores
+
+--
+### Who are you? What brings you here?
+
+---
+# Be Reproducible!
+.pull-left-medium[
+What is reproducibility?
+
+- **computationally reproducible** means: with same code + same data + same environment
+== same results
+
+- Not the same as **replication**, where _different_ methods and _different_ data lead to the same research findings
+
+Why do you want to make your work reproducible?
+
+- for whom?
+
+- what do they gain?
+
+- what do you gain?
+]
+
+--
+
+.pull-right-medium[
+![futureself](https://imgs.xkcd.com/comics/future_self.png)
+]
+---
+# A great example
+![example](images/screenshots/badexample.png)
+
+---
+# Is this enough?
+
+- Access to the code
+- Access to the data
+- (And let's assume we can replicate the enviroment)
+
+Do you feel confident about this project?
+--
+
+> This code is a kludgly, ugly, inefficient mess. 
+(...)
+>  It is probably riddled with problems, mistakes, bugs, inefficiencies, vestigial code stubs, etc etc.
+(...)
+> I am as confident as I am capable of being that all of the factual claims that were made in the manuscript are accurate.
+
+--
+
+We need to do more: we need to inspire trust.
+- The code is correct (and I have made it easy for you/someone to check);
+- My workflow is robust;
+- My workflow *itself* is accessible, and I will be guiding you through it.
+
+
+---
+# What does a workflow look like?
+
+![ds-workflow](https://github.com/allisonhorst/stats-illustrations/raw/master/openscapes/environmental-data-science-r4ds-general.png)
+- data cleaning is an essential first step
+- think modular: each step requires own input, process, output
+
+.footnote[
+Illustration by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)]
+
+---
+# What will we do today?
+
+We will take you through a workflow (in a broader sense!)
+
+--
+
+- Setting up a project
+
+- Establishing a robust backup / version control system
+
+- Writing good code
+
+- Writing documentation
+
+- Making your project accessible
+
+--
+
+We will end by trying to reproduce each others' projects!
+
+--
+
+#### Do you have your own data/code?
+
+If not: find an interesting dataset [on this github repo](https://github.com/rfordatascience/tidytuesday). How about:
+- [space launches](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-01-15)
+- [nobel prize winners](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-05-14)
+- [cetaceans data](https://github.com/rfordatascience/tidytuesday/tree/master/data/2018/2018-12-18)
+
+
+
+---
+# What do we expect from you?
+
+- Our group today has many different abilities and experiences. We hope you will value this as much as we do!
+
+- Feel free and safe to share your expertise and experiences, either by helping your neighbor or by showing everyone.
+
+--
+
+#### Our objectives for you
+We want to teach you **good habits** that will make your work more accessible, trustworthy, and reproducible by others. In doing so, we have tried to identify those habits that are a **good return on investment**: meaning, they save you time in the not-so-long run.
+--
+#### Give us feedback!
+
+  - Does this tool/lesson align with the objectives of the course?
+  
+  - Do/did you have (access to) crucial basic information to understand our lessons?
+
+  - If you do not know a certain word or term (or you think others may not know it): put it in the glossary, at [tinyurl.com/repco-glossary](https://docs.google.com/document/d/1UHBFyfvHoHXiV1Slr_DvxYDQyakozuPw_xPTJgeNInI/edit)
+
+---
+# Let's get practical!
+
+- You can find the slides at [tinyurl.com/repcopilot](https://utrechtuniversity.github.io/workshop-computational-reproducibility/). You may need links or code from these slides, so do open them.
+
+- There's also a (tentative) schedule.
+
+- This is a workshop, so do follow along! Use your sticky notes to signal to us: 
+  - green means: I'm ready for the next step!
+  - pink means: I need assistance, please.
