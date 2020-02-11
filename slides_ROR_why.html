@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Open and Reproducible Science: WHY?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Barbara Vreede" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Open and Reproducible Science: WHY?
+### Barbara Vreede
+
+---
+
+
+# What is science?
+
+.quote[Science is a systematic enterprise that builds and organizes knowledge in the form of testable explanations and predictions about the universe.]
+.source[[Wikipedia](https://en.wikipedia.org/wiki/Science)]
+
+---
+# What is science?
+
+.quote[If I have seen further, it is by standing on the shoulders of Giants.]
+.source[[Sir Isaac Newton](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants)]
+
+
+---
+# Merton's Scientific Norms
+
+- **Communalism**: scientific results are the common property of the community. 
+
+- **Universalism**: all scientists can contribute to science regardless of race, nationality, culture, or gender.
+
+- **Disinterestedness**: act for the benefit of a common scientific enterprise, rather than for personal gain.
+
+- **Skepticism**: scientific claims must be exposed to critical scrutiny before being accepted.
+
+_Robert K. Merton, 1942_
+
+--
+
+#### Do you feel we are upholding these norms?
+
+---
+# The Reproducibility crisis
+
+![crisis](https://www.nature.com/news/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg)
+
+.footnote[Source: [1,500 scientists lift the lid on reproducibility](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970), Nature (2016)]
+---
+# Replication vs. reproduction
+
+- **computationally reproducible** means: with same code + same data + same environment
+== same results
+
+- Not the same as **replication**, where _different_ methods and _different_ data lead to the same research findings
+
+![replication_reproduction](https://miro.medium.com/max/2146/1*_2nqAFHk-H7AmQD5VPQf6A.jpeg)
+
+.footnote[Source: [Towards Data Science](https://towardsdatascience.com/data-sciences-reproducibility-crisis-b87792d88513)]
+
+---
+# Reproducibility issues == research waste
+
+![](images/research_waste.png)
+There are many reasons for problems in reproducibility. Each requires its own approach. All lead to a loss of time, effort, resources, credence: **research waste**.
+
+
+.footnote[Source: Sean Grant, [Transparency and the Research Cycle](https://osf.io/mk7y5/)]
+---
+# Tackling research waste
+
+![research_conduct](images/research_conduct.png)
+![research_conduct](images/research_conduct_strategies.png)
+
+
+.footnote[Source: [UK Academy of Medical Sciences](https://acmedsci.ac.uk/file-download/38208-5631f0052511d.pdf)]
+---
+# Why is this happening?
+
+#### Perverse incentives embedded in the system
+
+- Little funding, lots of people: a highly competitive system
+- Publication pressure: "Publish or Perish"
+- Selective reporting: positive over negative outcomes, and novelty over replication.
+
+--
+
+#### Researchers are, ahem, human!
+
+- Humans are biased to see patterns, even where none exist
+- Subject to confirmation bias for pet theories/convictions
+- Not immune to outside pressure
+- Limited time, limited resources
+- Researchers are trained specialists, yet expected to be all-round excellent (spoiler alert: this is pretty hard)._
+
+--
+
+#### In short: Science is a human endeavour. 
+Humans make choices, have biases, experience system pressure.
+
+---
+# Mistakes were made
+
+![reinhardt_rogoff](images/reinhardt_rogoff.png)
+
+
+.footnote[Source: [Ruth Alexander, BBC News](https://www.bbc.com/news/magazine-22223190)]
+
+---
+# Mistakes were made
+
+
+Spot the difference:
+
+
+.pull-left[![kern](images/kernpre.png)
+Published 08/2013,
+retracted 02/2014]
+.pull-right[![kern](images/kernpost.png)
+Published 10/2014]
+
+
+.footnote[Source: [Bad spreadsheet merge kills depression paper, quick fix resurrects it](https://retractionwatch.com/2014/07/01/bad-spreadsheet-merge-kills-depression-paper-quick-fix-resurrects-it/)]
+
+
+---
+# Mistakes were made
+
+My own experience...
+
+
+---
+
+# Researcher degrees of freedom
+
+Opportunistic use of researcher degrees of freedom when:
+- Formulating hypotheses
+- Designing the study
+- Running the study
+- Analyzing the data
+- Reporting the study
+
+.footnote[See: Marjan Bakker, [Scientific Conduct and Researcher Degrees of Freedom](https://osf.io/nrsvu/)]
+---
+# Opportunistic use of researcher DF
+
+![df_opportunism](images/df_opportunism.png)
+.footnote[Source: [John _et al._, 2012; Psychological Science](https://journals.sagepub.com/doi/abs/10.1177/0956797611430953)]
+
+---
+# Self-cleaning nature of science
+
+![](images/secondarypubs.png)
+
+"Some non-reproducible preclinical papers had spawned an entire field, with hundreds of secondary publications that expanded on elements of the original observation, but did not actually seek to confirm or falsify its fundamental basis."
+
+.footnote[Source: [Begley &amp; Ellis, 2012](https://www.nature.com/articles/483531a?cmpid=microsoft)]
+---
+
+# The value of reproduction
+
+Reproduction is a vital contribution to science: by preventing (further) research waste, and identifying the giants on whom to stand. Yet we keep them to ourselves.
+
+![reproduction_attempt](images/reproduction_attempt.png)
+
+.footnote[Source: [1,500 scientists lift the lid on reproducibility](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970), Nature (2016)]
+
+---
+# The value of reproduction
+
+![](images/1728_TURI_Book sprint_26 culture shift_040619.jpg)
+
+.footnote[Image by Scriberia, CC-BY]
+---
+# Replicated Science as a publication
+
+![rescienceC](images/rescienceC.png)
+
+.footnote[[rescience.github.io](https://rescience.github.io/)]
+---
+# The Four Facets of Reproducibility
+
+.pull-left-medium[#### Documentation
+What do you need to execute this project? Where do you start?
+
+#### Organization
+Demonstrate a trustworthy workflow.
+
+#### Automation
+Automated analyses trace your steps, and prevent human error (or at the very least: document it).
+
+#### Dissemination
+Share your data, release your code, publish your findings.]
+
+--
+.pull-right-medium[
+![futureself](https://imgs.xkcd.com/comics/future_self.png)
+]
+---
+# The ultimate goal
+
+.quote[To advance the integrity, credibility, and utility of research.]
+
+.source[Sean Grant]
+
+.footnote[Source: Sean Grant, [Transparency and the Research Cycle](https://osf.io/mk7y5/)]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
