@@ -61,13 +61,36 @@ options(htmltools.dir.version = FALSE)
 
 Contain the shared materials and your workflow in a unit for dissemmination:
 
-## The Research Compendium
+#### The Research Compendium
 
+--
+
+![research_compendium](images/compendium_small.png)
+
+--
+
+- Stick with the convention of your peers;
+
+- Keep data, methods, output separate; 
+
+- Specify your computational environment as clearly as you can.
+
+
+.footnote[Source: [Karthik Ram, 2019 (rstudio::conf )](https://github.com/karthik/rstudio2019)]
 ---
 # Research Compendium
 
-![research_compendium](inspiration/talks/assets/reproducible-data-analysis_042.png)
-.footnote[Source: [Karthik Ram, 2019 (rstudio::conf )](https://github.com/karthik/rstudio2019)] ]
+![research_compendium](images/reproducible-data-analysis_042.png)
+.footnote[Source: [Karthik Ram, 2019 (rstudio::conf )](https://github.com/karthik/rstudio2019)]
+
+---
+
+# Research Compendium
+
+![compendium_structure](images/reproducible-data-analysis-13.png)
+
+
+.footnote[Source: [Karthik Ram, 2019 (rstudio::conf )](https://github.com/karthik/rstudio2019)]
 
 ---
 # Getting started
