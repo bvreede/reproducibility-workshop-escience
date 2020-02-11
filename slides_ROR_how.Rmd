@@ -81,6 +81,8 @@ Contain the shared materials and your workflow in a unit for dissemmination:
 # Research Compendium
 
 ![research_compendium](images/reproducible-data-analysis_042.png)
+
+
 .footnote[Source: [Karthik Ram, 2019 (rstudio::conf )](https://github.com/karthik/rstudio2019)]
 
 ---
@@ -415,6 +417,7 @@ _NB: There is a .gitkeep file in your template -- this does not do the opposite 
 # Enjoy, and git responsibly!
 
 - Commits should be atomic: comprehensive 'units' of changes.
+
   - **DO**: edit/add an .svg and add it to your .Rmd presentation in the same commit
   - **DON'T**: edit for a full day and put this in a single commit (or worse: forget to...)
   
