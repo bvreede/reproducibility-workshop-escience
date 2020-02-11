@@ -444,4 +444,4 @@ _NB: There is a .gitkeep file in your template -- this does not do the opposite 
 
 - A book with [all the ins and outs of git](https://www.git-scm.com/book/en/v2) from the git website
 
-![atlassian](images/atlassian/bubblediag.svg)
+![atlassian](images/bubblediag.svg)
