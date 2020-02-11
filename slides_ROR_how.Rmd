@@ -1,0 +1,424 @@
+---
+title: "Open and Reproducible Science: HOW?"
+author: "Barbara Vreede"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts, 'custom.css']
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+# The paper is the advertisement
+
+> “an article about computational result is advertising, not scholarship. The **actual scholarship is the full software environment, code and data, that produced the result.**”
+
+*John Claerbout, paraphrased in [Buckheit and Donoho (1995)](https://statweb.stanford.edu/~wavelab/Wavelab_850/wavelab.pdf)*
+
+--
+
+#### Why is our whole system geared towards **reviewing, publishing, distributing, archiving** the advertisement?
+---
+# Step 1: Sharing
+
+![example](images/badexample.png)
+
+---
+# FAIR
+
+![fair](https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/FAIR_data_principles.jpg/1200px-FAIR_data_principles.jpg)
+
+[Fair data](https://www.force11.org/group/fairgroup/fairprinciples)
+
+[Fair software](https://fair-software.nl/)
+
+---
+# Step 2: Instill workflow trust
+
+
+#### We need to do more than share: we need to inspire trust.
+
+- The code is correct (and I have made it easy for you/someone to check);
+- My workflow is robust;
+- My workflow *itself* is accessible, and I will be guiding you through it.
+
+--
+
+#### A reproducible project:
+
+- Has an understandable project structure;
+- Is under version control;
+- Is annotated and documented.
+
+---
+# Step 3: Comprise 
+
+Contain the shared materials and your workflow in a unit for dissemmination:
+
+## The Research Compendium
+
+---
+# Research Compendium
+
+![research_compendium](inspiration/talks/assets/reproducible-data-analysis_042.png)
+.footnote[Source: [Karthik Ram, 2019 (rstudio::conf )](https://github.com/karthik/rstudio2019)] ]
+
+---
+# Getting started
+
+- Contain your project in a single recognizable folder
+
+- Define a project structure. Hint: distinguish folder _types_:
+  - **Read-only**: data, metadata
+  - **Human-generated**: code, paper, documentation
+  - **Project-generated**: clean data, figures, models...
+
+- Initialize a **README** file, document your project
+
+- Choose a **license**
+
+- Publish your project.
+---
+
+# Cookiecutter
+
+You can set up a project template using a nifty tool called cookiecutter.
+
+First, ensure you have cookiecutter installed:
+```bash
+pip install cookiecutter
+```
+
+#### If you do not have pip:
+
+Install pip using instructions [here](https://utrechtuniversity.github.io/workshop-computational-reproducibility/preparations).
+
+Or try the following alternatives:
+
+- MacOS X with Homebrew:
+```bash
+brew install cookiecutter
+```
+- Debian/Ubuntu:
+```bash
+sudo apt-get install cookiecutter
+```
+---
+# Cookiecutter
+
+![cookiecutter](https://raw.githubusercontent.com/cookiecutter/cookiecutter/3ac078356adf5a1a72042dfe72ebfa4a9cd5ef38/logo/cookiecutter_medium.png)
+
+> A command-line utility that creates projects from cookiecutters (project templates). e.g. creating a Python package project from a Python package project template.
+>
+> _[cookiecutter.readthedocs.io](https://cookiecutter.readthedocs.io/en/latest/)_
+
+There are MANY templates available for your purposes. [Take a look!](https://github.com/cookiecutter/cookiecutter)
+
+We have designed a template based on [Packaging data analytical work reproducibly using R (and friends)](https://peerj.com/preprints/3192/) by Marwick et al., 2018. To use it, enter:
+
+```bash
+cookiecutter gh:bvreede/research-compendium
+```
+Answer the questions cookiecutter asks you, and browse the resulting project to see where your answers ended up.
+
+---
+# A note on paths
+
+- Your project should be transportable between computers.
+
+- For this reason, you should use **relative paths** only: compare
+  - `/Users/barbara/Dropbox/proteindomains/data/zincfinger.json`
+  - `./data/zincfinger.json`
+
+- `./` means: in this folder
+
+- `../` means: one folder up
+
+---
+# Choosing a license
+
+
+> When you make a creative work (which includes code), the work is under exclusive copyright by default. Unless you include a license that specifies otherwise, nobody else can copy, distribute, or modify your work without being at risk of take-downs, shake-downs, or litigation. Once the work has other contributors (each a copyright holder), “nobody” starts including you.
+_[choosealicense.com](https://choosealicense.com/no-permission/)_
+
+--
+
+#### In other words:
+- Copyright is implicit; others cannot use your code without your permission.
+
+- Licensing gives that permission, and its boundaries and conditions.
+
+- Choosing a license early on means being aware of your license as the project proceeds (and not creating conflicts).
+
+- There are over [80 OSI-approved licenses](https://opensource.org/licenses/alphabetical) (and [many](http://dbad-license.org), [many](http://www.wtfpl.net) others) to choose from.
+
+--
+
+What is important to you? What does your lab use? [Choose your own license!](http://choosealicense.com)
+
+---
+# Publishing your project
+
+Uh... Isn't 'publication' the thing you do... _at the end?_ 
+
+--
+
+No! Publishing your project at an early stage
+- forces you to consider readability throughout
+- minimizes the mess you have to deal with when you (finally) decide to publish
+- allows collaboration and support
+- facilitates sharing and re-use.
+
+--
+
+_But what if someone scoops my code! I'm a revolutionary, they will steal my ideas!_
+
+If you are super paranoid, you can always opt for a private repository. It is your work & up to you. But consider the advantages!
+
+---
+# Publishing unpublished data
+
+- If you have sensitive data...
+
+ - Don't include your data in your software repository (that's not what they are for anyway).
+ - Consider generating simulated data so your code can run regardless.
+
+--
+
+- And for all data:
+
+  - Your data should be separate from your code!
+  - If your code references your data, consider a config or metadata file for these references.
+
+
+---
+# Where do I publish?
+
+.pull-left-larger[
+### Living project: github
+(or other social coding platform):
+
+- synergistic with version control software git
+
+- makes history public and accessible _(eek!)_
+
+- allows publication of different releases
+
+- provides a platform for interaction and collaboration
+
+### Archiving a release: zenodo
+(or other stable repository, like the [OSF](https://vickysteeves.gitlab.io/2018-uutah-repro/the-open-science-framework.html))
+- [direct archiving supported](https://guides.github.com/activities/citable-code/) from github to zenodo
+
+- this gives you a doi: your code is citeable!
+]
+.pull-right-smaller[
+![octocat-project](https://github.githubassets.com/images/modules/logos_page/Octocat.png)
+![zenodo](https://blog.zenodo.org/static/img/logos/zenodo-gradient-1000.png)
+]
+---
+
+# Why do you need version control?
+
+.pull-left[
+
+- It will help you manage ~~your code~~ most of your files (it is like track changes on steroids: it applies to all files in a folder).
+
+- It allows you to trace back your steps: if something breaks, you can figure out what happened.
+
+- NO MORE thesis_final_final_SERIOUSLYFINAL.Rmd
+
+#### even better:
+- a good version control system allows you to collaborate and share!
+
+- a good version control system facilitates experimentation!
+
+]
+
+.pull-right[
+![final](http://www.phdcomics.com/comics/archive/phd101212s.gif)
+]
+---
+.pull-left-larger[
+# What is git?
+- Distributed Version Control system written by Linus Torvalds (of Linux fame)
+
+- Allows you to log updates, branch your work (so you can experiment without losing the original!), and keep all backups, while efficiently using your storage
+
+- Gives user a lot of control on what to track, and adds a narrative to changes ('commit comments')
+
+- Current standard for code
+
+- Open Source software written for the command line...
+
+- ... but many GUI-clients exist nowadays, and most coding IDEs have built-in git.]
+.pull-right-smaller[
+![distributed](images/distributed.png)
+
+![git](https://imgs.xkcd.com/comics/git.png)
+]
+
+---
+# Your turn: starting with git
+
+1. (You should have installed git by now! If you have not: [git-scm.com](https://git-scm.com).)
+
+1. Navigate to your project folder in a terminal.
+```bash
+cd [path/to/project_folder]
+```
+1. Initiate a git repository in this location:
+```bash
+git init
+```
+1. Add all your files to the staging area:
+```bash
+git add *
+```
+1. Commit all the files in the staging area to your repository:
+```bash
+git commit -m "First commit"
+```
+
+---
+# Your turn: connecting to github
+
+1. Go to your github account and add a new repository (click '+', then 'New repository'):
+
+   ![new-repo](images/github_add_repo.png)
+
+1. Fill out the information for your new repository. DO NOT initialize the repository yet!
+
+  ![initialize](images/initialize.png)
+  
+1. Set the origin of your local repository to the URL of your repo on github:
+```bash
+git remote add origin git@github.com:[youraccount]/[yourrepo].git
+```
+
+
+---
+# Your turn: pushing to github
+
+You can now push the content of your local repository to the one on github:
+
+```bash
+git push -u origin master
+```
+
+Congrats, your local repository now has an online representation!
+
+![octocat](https://github.githubassets.com/images/modules/logos_page/Octocat.png) \\\_\_\_ _THANK YOU!_
+
+Take a look at your online repository. Who is the author of your commits? If it is not you, you can configure git to use your identity (make sure github knows this email address):
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+
+---
+# Your workflow
+
+1. Add the changed file(s) to the staging area, and commit the changes:
+```bash
+git add src/filename.py anotherfile.txt
+git add config/configfile.json
+git commit -m "My commit message"
+```
+OR
+
+2. commit files directly, without staging:
+```bash
+git commit src/filename.py anotherfile.txt -m "My commit message"
+```
+
+NB: don't forget your commit message (try what happens if you do!).
+![repo](images/git-staging-area.svg)
+.footnote[
+Image credit:<br />
+Software Carpentries
+]
+---
+# What else can I do with git?
+
+Check the status of your repository:
+```bash
+git status
+```
+Check the log of your previous commits:
+```bash
+git log
+git log --oneline
+```
+What differences are there between your last commit and your workspace? (Or between two previous commits...)
+```bash
+git diff
+git diff HEAD~3
+```
+SO much more!
+```bash
+git --help
+```
+
+---
+# .gitignore
+
+The .gitignore file in your template contains files that **by definition** will not be tracked by git.
+
+For example, if you do not want to track a file .DS_Store (always present on my mac), you enter a line like this in your .gitignore file:
+```bash
+.DS_Store
+```
+Similarly, you can ensure all output in a folder will not be tracked:
+```bash
+results/
+```
+
+Or all files with a certain extension:
+```bash
+ *.dat 
+```
+
+_NB: There is a .gitkeep file in your template -- this does not do the opposite to .gitignore, but is instead used as a placeholder for folders: git does not track empty folders..._
+
+---
+
+# Enjoy, and git responsibly!
+
+- Commits should be atomic: comprehensive 'units' of changes.
+  - **DO**: edit/add an .svg and add it to your .Rmd presentation in the same commit
+  - **DON'T**: edit for a full day and put this in a single commit (or worse: forget to...)
+  
+--
+
+- Commits should have informative messages so you (and others) can trace your steps
+
+  ![git_commit](https://imgs.xkcd.com/comics/git_commit.png)
+
+--
+
+- Track most files; .gitignore those files you don't.
+
+--
+
+- Explore new ideas with branches, keep a stable version on `master`
+
+
+---
+# Do you want to learn more?
+
+- A [Software Carpentry course on git](https://swcarpentry.github.io/git-novice/)
+
+- A [version control + git tutorial](https://www.atlassian.com/git/tutorials/what-is-version-control) on Atlassian
+
+- A [git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet) from Atlassian
+
+- A book with [all the ins and outs of git](https://www.git-scm.com/book/en/v2) from the git website
+
+![atlassian](images/atlassian/bubblediag.svg)
