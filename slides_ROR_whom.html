@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Open and Reproducible Science: WITH WHOM?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Barbara Vreede" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Open and Reproducible Science: WITH WHOM?
+### Barbara Vreede
+
+---
+
+
+
+# Open science &amp; inclusivity
+
+&gt; **Open is cancelled.** (...) Copyright and software licences have failed to control bad actors and to support marginalised creators. The underlying theory is flawed and shallow. It’s time to move on and create a new wave of ethics focused community management tools for code and content. (...) Because the reality is that unless justice is centred, unless systems, technological and social, are built with the needs of oppressed groups at the forefront — anything we build will only serve to reinforce existing inequities.
+
+From: [A bee with a blog
+](https://medium.com/@beewithablog/open-is-cancelled-da7dd6f2aaaf)
+
+
+![](https://miro.medium.com/max/10368/1*0HLPdfY1PIAFqc3itCAI5w.jpeg)
+---
+# Welcoming and inclusive communities
+
+![toolkit](images/community_toolkit.png)
+
+.footnote[Source: [Welcoming and Inclusive Communities Toolkit](http://mcos.ca/wp-content/uploads/2017/07/module-1_toolkit_what-is-a-welcoming_and_inclusive_community.pdf)]
+
+---
+# Including others
+
+What are we doing for whom? (A very, very rough guide.)
+
+| User | Community
+--------:|:---------:|:---------:|:-------:
+Installation instructions | ✅ | ✅
+Dependency information | ✅ | ✅ 
+Citation information | ✅ | 
+Vignette/notebook | ✅ |
+Code documentation | | ✅
+Issue template | ✅ | ✅
+Pull request template | | ✅
+Contribution guidelines | | ✅
+Community Code of Conduct | ✅ | ✅
+
+---
+# Repository &gt; Insights &gt; Community
+![shirtballs_community](images/community_github.png)
+
+---
+# Community code on Github
+
+- Community checklist:
+  - Description
+  - README
+  - License
+  - [Code of Conduct](https://opensource.guide/code-of-conduct/)
+
+![](images/codeofconduct.png)
+---
+# Code of Conduct
+
+&gt;"Facilitate healthy and constructive community behavior by adopting and enforcing a code of conduct."
+[opensource.guide](https://opensource.guide/code-of-conduct/)
+
+#### Why do I need a code of conduct?
+A CoC establishes expectations for behavior for your participants, and can help create healthy, constructive community behavior. 
+--
+
+#### Establishing a code of conduct
+Establish a CoC as early as possible. Describe _where_ the code of conduct takes effect, _whom_ it applies to, _what_ happens if someone violates it, and _how_ someone can report violations.
+--
+
+#### Commit to enforcing your code of conduct
+Take reports seriously and investigate. Doing so signals to your community that you value their perspective and trust their judgment. Finally, take appropriate action.
+--
+
+#### Encourage the behavior you want to see
+When a project seems hostile or unwelcoming, you may lose (potential) contributors. Fostering a welcoming environment will help your community grow!
+---
+# Creating a code of conduct
+
+- Use a template, e.g. the [Citizen Code of Conduct](http://citizencodeofconduct.org/), or the [Contributor Covenant](https://www.contributor-covenant.org/)
+
+- Find a CoC you believe in, e.g. the [Django Code of Conduct](https://www.djangoproject.com/conduct/)
+
+- Write a code of conduct with your community.
+  - Ensure inclusiveness before starting (e.g. works well in a workshop/sprint environment)
+  - Have trustworthy and impartial backup to deal with enforcement
+
+--
+ 
+#### Adding your code of conduct to your repository:
+Add a `CODE_OF_CONDUCT.md` file to the root of your repository.
+
+---
+
+# Community code on Github
+
+- Community checklist:
+  - Description
+  - README
+  - License
+  - Code of Conduct
+  - [Contributing guidelines](https://help.github.com/en/github/building-a-strong-community/setting-guidelines-for-repository-contributors)
+  
+![](https://help.github.com/assets/images/help/pull_requests/contributing-guidelines.png)
+---
+# Contributing guidelines
+
+Answer questions like: what do you want people to do when they find bugs? When they have written a contribution to the code? Or if they have documentation to add?
+
+--
+
+For example: [Ruby on Rails](https://github.com/rails/rails/blob/master/CONTRIBUTING.md)
+![ruby](images/ruby_contributing.png)
+
+
+--
+#### Adding your code of conduct to your repository:
+
+Add a `CONTRIBUTING.md` file to the root of your repository.
+
+---
+# Community code on Github
+
+- Community checklist:
+  - Description
+  - README
+  - License
+  - Code of Conduct
+  - Contributing guidelines
+  - [Issue template]()
+  - Pull request template
+
+[Ionic pull request template example](https://github.com/ionic-team/ionic/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
+
+---
+# Creating an issue template
+
+- Look at issues on similar projects. What do you want to know from your users?
+
+- Basic questions you expect:
+  - Feature request ("Can you add this cool functionality?")
+  - Bug report ("It does not work...")
+  - ... something specific for your project?
+
+- Github guides you through this quite well!
+
+--
+
+#### Adding your issue templates: 
+Create an `ISSUE_TEMPLATE.md` file, preferably in a `.github` directory. For specific template options, create an `.github/ISSUE_TEMPLATE/` directory, and populate it with your issue templates. E.g:
+- `/.github/ISSUE_TEMPLATE/feature_request.md`
+- `/.github/ISSUE_TEMPLATE/bug_report.md`
+
+---
+
+# Creating a pull request template
+![ionic_pr](images/ionic_pr_template.png)
+
+
+Source: [Ionic pull request template](https://github.com/ionic-team/ionic/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
+
+
+#### Adding your pull template(s): 
+Create a `PULL_REQUEST_TEMPLATE.md` file, preferably in a `.github` directory. For specific template options, create an `.github/PULL_REQUEST_TEMPLATE/` directory, and populate it with your templates. E.g:
+- `/.github/PULL_REQUEST_TEMPLATE/documentation_contribution.md`
+- `/.github/PULL_REQUEST_TEMPLATE/patch.md`
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
