@@ -14,23 +14,6 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
-# Open science & inclusivity
-
-> **Open is cancelled.** (...) Copyright and software licences have failed to control bad actors and to support marginalised creators. The underlying theory is flawed and shallow. It’s time to move on and create a new wave of ethics focused community management tools for code and content. (...) Because the reality is that unless justice is centred, unless systems, technological and social, are built with the needs of oppressed groups at the forefront — anything we build will only serve to reinforce existing inequities.
-
-From: [A bee with a blog
-](https://medium.com/@beewithablog/open-is-cancelled-da7dd6f2aaaf)
-
-
-![](https://miro.medium.com/max/10368/1*0HLPdfY1PIAFqc3itCAI5w.jpeg)
----
-# Welcoming and inclusive communities
-
-![toolkit](images/community_toolkit.png)
-
-.footnote[Source: [Welcoming and Inclusive Communities Toolkit](http://mcos.ca/wp-content/uploads/2017/07/module-1_toolkit_what-is-a-welcoming_and_inclusive_community.pdf)]
-
----
 # Including others
 
 What are we doing for whom? (A very, very rough guide.)
@@ -134,10 +117,8 @@ Add a `CONTRIBUTING.md` file to the root of your repository.
   - License
   - Code of Conduct
   - Contributing guidelines
-  - [Issue template]()
-  - Pull request template
-
-[Ionic pull request template example](https://github.com/ionic-team/ionic/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
+  - [Issue template](https://help.github.com/en/enterprise/2.18/user/github/building-a-strong-community/configuring-issue-templates-for-your-repository)
+  - [Pull request template](https://help.github.com/en/enterprise/2.18/user/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository)
 
 ---
 # Creating an issue template
@@ -171,3 +152,25 @@ Source: [Ionic pull request template](https://github.com/ionic-team/ionic/blob/m
 Create a `PULL_REQUEST_TEMPLATE.md` file, preferably in a `.github` directory. For specific template options, create an `.github/PULL_REQUEST_TEMPLATE/` directory, and populate it with your templates. E.g:
 - `/.github/PULL_REQUEST_TEMPLATE/documentation_contribution.md`
 - `/.github/PULL_REQUEST_TEMPLATE/patch.md`
+
+---
+# What happens on Github?
+
+.pull-left[
+#### Working alone or in collaboration
+- `git pull` to local repository
+- `git push` to remote repository
+- merge occurs when adding new (often small) changes to a repository, either remote or local
+- merge conflicts can only be solved locally, so always pull first!
+
+#### Merging branches and forks
+- your own branches within a repository
+- a forked repository: someone made a copy on github
+- pull request from a cloned repository
+]
+
+![merge_atlassian](https://wac-cdn.atlassian.com/dam/jcr:83323200-3c57-4c29-9b7e-e67e98745427/Branch-1.png?cdnVersion=807)
+
+.footnote[Source: [Atlassian](https://www.atlassian.com/de/git/tutorials/using-branches/git-merge)]
+
+
